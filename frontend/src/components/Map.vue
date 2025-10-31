@@ -12,7 +12,7 @@
         {{ currentLat.toFixed(4) }}°, {{ currentLon.toFixed(4) }}° | 
         <strong>Alt:</strong> {{ currentAlt.toFixed(2) }} km
       </p>
-      <p class="path-info">Showing last 20 positions</p>
+      <p class="path-info">Showing last 200 positions</p>
     </div>
   </div>
 </template>
