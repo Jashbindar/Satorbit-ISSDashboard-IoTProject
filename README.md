@@ -612,5 +612,5 @@ For questions or issues, please contact:
 
 ---
 
-*Last Updated: [Current Date]*  
+*Last Updated: 1st November 2025*  
 *Version: 1.0.0*
