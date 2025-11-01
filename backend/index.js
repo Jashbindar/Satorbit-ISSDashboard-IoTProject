@@ -69,7 +69,7 @@ app.get('/api/iss-location', async (req, res) => {
 // ✅ Optional: API endpoint to get stored ISS data
 app.get('/api/iss-data', async (req, res) => {
   try {
-    const querySnapshot = await db.collection('iss_location')
+    const querySnapshot = await db.collection('iss_data')
       .orderBy('createdAt', 'desc')
       .limit(50)
       .get();
