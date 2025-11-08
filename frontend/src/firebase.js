@@ -7,7 +7,6 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDTwDHHc-sF53PrYZUD2pSxAah2yhGu4Qc",
   authDomain: "satorbit-iss-dashboard.firebaseapp.com",
   projectId: "satorbit-iss-dashboard",
   storageBucket: "satorbit-iss-dashboard.firebasestorage.app",
