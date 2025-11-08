@@ -144,6 +144,8 @@ vite.config.ts.timestamp-*
 firebasecredential.json
 firebase-key.json
 *firebase*-adminsdk-*.json
+serviceAccountKey.json
+backend/serviceAccountKey.json
 
 # Dependencies
 node_modules/
@@ -160,6 +162,3 @@ npm-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
-backend/
-firebasecredential.json
-.env
