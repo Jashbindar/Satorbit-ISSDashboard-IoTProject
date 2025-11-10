@@ -147,7 +147,7 @@ app.listen(PORT, '0.0.0.0', () => {
   // 🧹 Start cleanup - run immediately and every 30 minutes
   simpleCleanup().catch(err => console.error("Error in initial cleanup:", err));
   setInterval(() => {
-    simpleCleanup().catch(err => console.error("nError in scheduled cleanup:", err));
+    simpleCleanup().catch(err => console.error("Error in scheduled cleanup:", err));
   }, 30 * 60 * 1000); // Every 30 minutes
   console.log('🧹 Cleanup scheduled every 30 minutes (keeps 1000 records)');
 });
