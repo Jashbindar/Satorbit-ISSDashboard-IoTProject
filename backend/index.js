@@ -138,12 +138,16 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`📍 ISS API: http://localhost:${PORT}/api/iss-location`);
   
   // Start background ISS tracking
-  fetchISSLocation();
-  setInterval(fetchISSLocation, 60000); // Fetch every 60 seconds
+  fetchISSLocation().catch(err => console.error("❌ Error in initial ISS location fetch:", err));
+  setInterval(() => {
+    fetchISSLocation().catch(err => console.error("❌ Error in scheduled ISS location fetch:", err));
+  }, 60000); // Fetch every 60 seconds
   console.log('🛰️ ISS tracking started - fetching data every 60 seconds');
+  
   // 🧹 Start cleanup - run immediately and every 30 minutes
-  simpleCleanup();
-  setInterval(simpleCleanup, 30 * 60 * 1000); // Every 30 minutes
-  console.log('🛰️ ISS tracking started');
+  simpleCleanup().catch(err => console.error("❌ Error in initial cleanup:", err));
+  setInterval(() => {
+    simpleCleanup().catch(err => console.error("❌ Error in scheduled cleanup:", err));
+  }, 30 * 60 * 1000); // Every 30 minutes
   console.log('🧹 Cleanup scheduled every 30 minutes (keeps 1000 records)');
 });

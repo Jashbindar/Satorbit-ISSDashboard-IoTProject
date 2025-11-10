@@ -1,8 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -20,19 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// 🔹 Temporary test: fetch data from Firestore
-async function testFirestoreFetch() {
-  try {
-    const querySnapshot = await getDocs(collection(db, "iss_location"));
-    querySnapshot.forEach((doc) => {
-      console.log("Fetched:", doc.id, doc.data());
-    });
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-}
+// Initialize Firestore
+const db = getFirestore(app);
 
-// Call it immediately (just for testing)
-testFirestoreFetch();
-
-export { db, collection, getDocs};
+export { db };

@@ -31,12 +31,6 @@ import Altitude from '@/components/AltitudeChart.vue'
             </div>
           </div>
         </div>
-        <div class="group-section">
-          <div class="group-members">
-            <span class="members-label">Project Team</span>
-            <span class="members-names">NADZIRA RAMLI(22010431), JASHBINDAR SINGH(22010432), NURHUMAIRA(22010433), ETHAN LEE(22010434)</span>
-          </div>
-        </div>
       </div>
     </header>
     
